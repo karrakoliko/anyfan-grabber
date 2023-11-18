@@ -71,6 +71,8 @@ async function main() {
 }
 
 main().then(url => {
+
+    // @todo: resolve default app for mime video/mp4 instead of hardcoded app
     spawn('celluloid',[url]);
 }).catch(e => {
     console.error(e.message);
