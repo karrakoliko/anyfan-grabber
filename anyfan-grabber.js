@@ -1,7 +1,7 @@
 const {parseArgs} = require('node:util');
 const axios = require('axios');
 
-const videoUrlRegexp = new RegExp('[\'\"](https://)(.+)\.mp4[\'\"]', 'gm');
+const videoUrlRegexp = new RegExp('(https://)(.+)\.mp4', 'gm');
 
 async function getPageUrl() {
 
