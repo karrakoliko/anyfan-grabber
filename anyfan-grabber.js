@@ -73,5 +73,5 @@ async function main() {
 main().then(url => {
     spawn('celluloid',[url]);
 }).catch(e => {
-    console.error(e);
+    console.error(e.message);
 })
