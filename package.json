@@ -10,5 +10,8 @@
   "license": "ISC",
   "dependencies": {
     "axios": "^1.6.2"
+  },
+  "bin": {
+    "anyfan": "anyfan-grabber.js"
   }
 }

@@ -1,5 +1,7 @@
+#! /usr/bin/env node
 const {parseArgs} = require('node:util');
 const axios = require('axios');
+const { spawn } = require("child_process");
 
 const videoUrlRegexp = new RegExp('(https://)(.+)\.mp4', 'gm');
 
@@ -69,9 +71,7 @@ async function main() {
 }
 
 main().then(url => {
-    console.log(url);
+    spawn('celluloid',[url]);
 }).catch(e => {
     console.error(e);
 })
-
-
