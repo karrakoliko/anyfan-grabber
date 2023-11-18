@@ -44,7 +44,7 @@ async function getVideoUrl(pageUrl) {
 
         const videoUrls = pageContent.match(videoUrlRegexp);
 
-        if(videoUrls.length < 1){
+        if(videoUrls === null || videoUrls.length < 1){
             throw new Error('No video urls found');
         }
 
